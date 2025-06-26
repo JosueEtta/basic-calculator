@@ -1,20 +1,38 @@
 body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 #calculator{
-     height: 400px;
-     width: 310px;
-     border-style: solid;
+    height: 440px;
+    width: 340px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    background: #fff;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 12px 18px 12px;
 }
 #screen{
-  
-    height:150px;
-    width:inherit;
-    border-bottom-style: solid;
-    font-size: x-large;
-    background-color: rgb(223, 213, 213)
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    background: #f3f6fa;
+    color: #222;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 #result{
     position: relative;
@@ -28,27 +46,62 @@ body{
 }
 #utility-container{
     margin-top: 5px;
-    width:inherit;
+    width:100%;
     display: flex;
     flex-direction:row;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 }
 .utility-button{
-    width:200px;
-    height: 40px;
-
+    width: 80px;
+    height: 38px;
+    color: #fff;
+    background: #ff5e62;
+    background: linear-gradient(90deg, #ff9966 0%, #ff5e62 100%);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.utility-button:hover{
+    background: linear-gradient(90deg, #ff5e62 0%, #ff9966 100%);
+    transform: translateY(-2px) scale(1.04);
 }
 #main-body{
-    width: inherit;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    height: 200px;
-   
+    gap: 12px;
+    height: 220px;
+    margin-top: 10px;
 }
-.sign-button,.number-button,#operation-button{
+.sign-button, .number-button, #operation-button{
     width: 60px;
-    box-sizing: border-box;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0 2px;
+    background: #e0e7ef;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.sign-button:hover, .number-button:hover, #operation-button:hover{
+    background: #b2d8f7;
+    color: #0a3d62;
+    transform: translateY(-2px) scale(1.05);
+}
+#operation-button{
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    font-weight: bold;
+}
+#operation-button:hover{
+    background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+    color: #fff;
 }
