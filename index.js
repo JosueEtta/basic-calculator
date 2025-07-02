@@ -24,39 +24,11 @@ utilityButton.forEach(element => {
     })
 });
 
-equalSign.addEventListener("click",function(){
-  /* let result = document.getElementById("result");
-   let answer;
-   let len = screen.textContent.length;
-   let signPosition=screen.textContent.indexOf(sign)
-   let leftNumber = screen.textContent.slice(0,signPosition)
-   let rightNumber = screen.textContent.slice(signPosition+1,len)
-   if(rightNumber == ""|| leftNumber == "" || signPosition == -1){ 
-        alert("Sorry computation cannot take place 😔");
-    } 
-    leftNumber = Number(leftNumber)
-    rightNumber = Number(rightNumber)
-    switch (sign) {
-        case '+':
-            answer = String(leftNumber + rightNumber);
-            screen.textContent = answer;
-            break;
-        case '-':
-            answer = String(leftNumber - rightNumber);
-            screen.textContent= answer
-            break;
-        case '/':
-             if(leftNumber == 0 ){
-                alert("❌ Sorry divison by zero is not allowed ❌")
-             }
-             answer = String(leftNumber/rightNumber);
-             screen.textContent = answer;
-             break;
-        case '*':
-            answer = String(leftNumber * rightNumber)
-             screen.textContent=answer;
-             break;         
-    } */
-    screen.textContent = eval(screen.textContent);
-})
+equalSign.addEventListener("click", function () {
+    try {
+        screen.textContent = eval(screen.textContent);
+    } catch (error) {
+        alert("Sorry command cannot be executed 😞");
+    }
+});
 
