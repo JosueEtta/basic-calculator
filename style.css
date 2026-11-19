@@ -166,34 +166,34 @@ body{
     transform: translateY(-2px);
 }
 
-.sign-button:active{
-    transform: scale(0.96);
-}
-
-.number-button:active{
-    transform: scale(0.96);
-}
-
-#operation-button:active{
-    transform: scale(0.96);
-}
-
+.sign-button:active,
+.number-button:active,
+#operation-button:active,
 .utility-button:active{
     transform: scale(0.96);
 }
 
-/* Tablets and small laptops */
+.author-credit{
+    position: fixed;
+    bottom: 14px;
+    left: 16px;
+    right: 16px;
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
 @media (max-width: 768px){
     #calculator{
         width: 340px;
     }
 }
 
-/* Phones */
 @media (max-width: 480px){
     body{
         align-items: flex-start;
-        padding: 16px;
+        padding: 16px 16px 56px;
         box-sizing: border-box;
     }
     #calculator{
@@ -207,30 +207,23 @@ body{
         height: 84px;
         font-size: 1.9rem;
     }
-    #utility-container{
-        gap: 10px;
-    }
+    #utility-container,
     #main-body{
         gap: 10px;
     }
     .utility-button{
         height: 44px;
     }
-    .sign-button{
-        height: 52px;
-    }
-    .number-button{
-        height: 52px;
-    }
+    .sign-button,
+    .number-button,
     #operation-button{
         height: 52px;
     }
 }
 
-/* Very small phones */
 @media (max-width: 360px){
     body{
-        padding: 10px;
+        padding: 10px 10px 56px;
     }
     #calculator{
         padding: 10px;
@@ -241,9 +234,7 @@ body{
         font-size: 1.6rem;
         padding: 10px 12px;
     }
-    #utility-container{
-        gap: 8px;
-    }
+    #utility-container,
     #main-body{
         gap: 8px;
     }
@@ -251,14 +242,8 @@ body{
         height: 40px;
         font-size: 1rem;
     }
-    .sign-button{
-        height: 46px;
-        font-size: 1.1rem;
-    }
-    .number-button{
-        height: 46px;
-        font-size: 1.1rem;
-    }
+    .sign-button,
+    .number-button,
     #operation-button{
         height: 46px;
         font-size: 1.1rem;
